@@ -874,10 +874,10 @@ function consultar($aForm = '', $op = '')
 					mi.minv_est_minv <> '0' and dmov.dmov_cod_bode = $bodega
 					$tmp 
 					order by mi.minv_cod_tran ";
-    $query = "SELECT 
-                    mi.minv_fmov,     
+    $query = "SELECT
+                    mi.minv_fmov,
                     mi.minv_cod_clpv,
-                    mi.minv_fac_prov, 
+                    mi.minv_fac_prov,
                     mi.minv_cod_tran, 
                     ( select 
                             tran_des_tran  
@@ -911,11 +911,10 @@ function consultar($aForm = '', $op = '')
                                             $tmp
                                             and dmov.dmov_cod_bode = $bodega
 
-                                            
-                                            
-                                    )   and  minv_est_minv <> '0'                    
-                        order by mi.minv_cod_tran
-                        ;";
+
+
+                                    )   and  minv_est_minv <> '0'
+                        order by mi.minv_cod_tran";
     //$oReturn->alert($query);
     $oReturn->alert('Buscando...');
     $i             = 1;
